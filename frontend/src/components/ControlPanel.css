@@ -1,0 +1,48 @@
+.crawler-panel {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  transition: box-shadow 0.3s;
+  border: 1px solid #e0e7ff;
+  min-width: 270px; /* Wider for dropdown */
+  max-width: 340px;
+  padding: 1.5rem 1.5rem;
+}
+
+.crawler-panel:hover {
+  box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.22);
+}
+
+.crawler-btn {
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px 0 rgba(16, 185, 129, 0.10);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  min-width: 90px;
+}
+
+.crawler-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 4px 0 rgba(16, 185, 129, 0.10);
+}
+
+.crawler-select {
+  background: #f1f5f9;
+  border: 1.5px solid #a5b4fc;
+  transition: border 0.2s;
+  min-width: 120px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.crawler-select:focus {
+  border: 2px solid #6366f1;
+  outline: none;
+}
+
+.crawler-controls-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: stretch;
+}

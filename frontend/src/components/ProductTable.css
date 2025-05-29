@@ -1,0 +1,137 @@
+/* Add to your main CSS file or ProductTable.css */
+
+/* Main page container: centers and limits width */
+.main-page-container {
+  max-width: 98vw;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Make ProductTable container even more compact */
+.product-table-container {
+  max-width: 100vw;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+/* Optionally, reduce min-width for table */
+.product-table {
+  min-width: 400px;
+}
+
+.product-table-container {
+  background: linear-gradient(90deg, #fffbe7 0%, #fff7cc 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  border: 1.5px solid #e0e7ff;
+  margin-top: 1.5rem;
+  padding: 2rem;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100vw;
+  padding-bottom: 1rem;
+}
+
+.product-table-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #6366f1;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+.product-table {
+  width: 100%;
+  min-width: 700px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.product-table th,
+.product-table td {
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+
+.product-table th:nth-child(2),
+.product-table td:nth-child(2) {
+  max-width: 180px; /* Product Name */
+}
+
+.product-table th:nth-child(5),
+.product-table td:nth-child(5) {
+  max-width: 220px; /* Image URL */
+}
+
+.product-table td a {
+  display: inline-block;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.product-table td a:hover,
+.product-table td a:focus {
+  white-space: normal;
+  word-break: break-all;
+  background: #f1f5f9;
+  z-index: 2;
+  position: relative;
+}
+
+.product-table th {
+  background: #fff8dc;
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e7ff;
+}
+
+.product-table tbody tr {
+  transition: background 0.18s;
+}
+
+.product-table tbody tr:hover {
+  background: #fff7cc;
+}
+
+.product-table img {
+  width: 3.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+.product-table td {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.product-table .product-id {
+  font-size: 0.85rem;
+  color: #a5b4fc;
+  letter-spacing: 0.02em;
+}
+
+.tooltip-hover .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  /* ...other styles... */
+}
+
+.tooltip-hover:hover .tooltip-text,
+.tooltip-hover:focus .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
