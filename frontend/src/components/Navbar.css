@@ -1,0 +1,265 @@
+.amazon-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #232f3e;
+  padding: 0.5rem 2rem;
+  min-height: 64px;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-small {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #f1f5f9 0%, #e0e7ff 100%);
+  box-shadow: 0 4px 24px 0 rgba(99, 102, 241, 0.07);
+  border-bottom: 1.5px solid #e0e7ff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar-logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+.navbar-logo-small {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 0.4rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(99, 102, 241, 0.08);
+  margin-right: 0; /* Ensure no right margin */
+  margin-left: 0.5rem; /* Optional: small space from previous item */
+  vertical-align: middle;
+}
+
+.navbar-title {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-shadow: 0 2px 8px rgba(99, 102, 241, 0.10);
+}
+
+.navbar-title-product {
+  color: #6366f1;
+  background: linear-gradient(90deg, #6366f1 40%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  margin-right: 0.15em;
+  letter-spacing: 0.01em;
+}
+
+.navbar-title-crawler {
+  color: #1e293b;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 4px rgba(99, 102, 241, 0.08);
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-avatar {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid #a5b4fc;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.navbar-avatar:hover {
+  transform: scale(1.07) rotate(-3deg);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.18);
+}
+
+.navbar-welcome {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.navbar-control-btn {
+  background: linear-gradient(90deg, #ffce4a 0%, #ff9900 100%);
+  color: #232f3e;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(255, 153, 0, 0.10);
+}
+
+.navbar-control-btn:hover {
+  background: linear-gradient(90deg, #ffb300 0%, #ff9900 100%);
+  color: #111;
+  box-shadow: 0 4px 16px rgba(255, 153, 0, 0.18);
+}
+
+.navbar-control-dropdown {
+  position: absolute;
+  right: 0;
+  top: 2.8rem;
+  min-width: 260px;
+  z-index: 100;
+  background: transparent;
+}
+
+/* Profile avatar hint */
+.navbar-profile-hint {
+  color: #a5b4fc;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Profile dropdown styling */
+.navbar-profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 3.2rem;
+  background-color: rgb(150, 196, 196);
+  min-width: 210px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.13);
+  border: 1.5px solid #e0e7ff;
+  padding: 1.2rem 1.2rem 1rem 1.2rem;
+  z-index: 100;
+  text-align: left;
+  animation: fadeIn 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* User Details Modal Styles */
+.user-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal box with Amazon yellow background */
+.user-modal {
+  background: linear-gradient(90deg, #ffce4a 0%, #ff9900 100%);
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(255, 153, 0, 0.18);
+  min-width: 320px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Modal close button */
+.user-modal-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 1.1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* User Details Modal Row */
+.user-modal-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* User Details Card Styling */
+.user-modal-details {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(255,153,0,0.13);
+  border: 2px solid #ffce4a;
+  padding: 2rem 2.5rem;
+  min-width: 220px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Profile image styling for consistency */
+.navbar-profile-img {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  border: 2px solid #ffce4a;
+  background: #fff;
+}
+
+/* Logout button styling to match crawler buttons */
+.user-modal-details button {
+  background: linear-gradient(90deg, #ffce4a 0%, #ff9900 100%);
+  color: #232f3e;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  margin-left: 0.5rem;
+}
+.user-modal-details button:hover {
+  background: linear-gradient(90deg, #ffb300 0%, #ff9900 100%);
+  color: #111;
+  box-shadow: 0 4px 16px rgba(255, 153, 0, 0.18);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Add this to Dashboard.css or your main content CSS */
+.dashboard-grid {
+  margin-top: 2.5rem; /* Adjust as needed */
+}

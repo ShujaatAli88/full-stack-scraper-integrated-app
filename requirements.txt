@@ -1,0 +1,9 @@
+requests
+pydantic
+pyairtable
+python-dotenv
+selenium
+loguru
+psycopg2-binary
+flask
+flask-cors

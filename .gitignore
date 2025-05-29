@@ -1,0 +1,12 @@
+/my
+*/my
+
+my
+.env
+*.env
+/env
+
+/frontend/node_modules
+/frontend/dist
+/frontend/.nuxt
+/frontend/.nuxtignore
