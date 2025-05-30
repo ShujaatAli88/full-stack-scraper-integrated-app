@@ -19,14 +19,16 @@ const Login = ({ onLogin }) => {
             });
             const data = await res.json();
             if (res.ok && data.success) {
+                localStorage.setItem("loggedIn", "true");
                 localStorage.setItem("userEmail", email);
                 onLogin && onLogin();
-                navigate("/dashboard"); // Redirect to /dashboard
+                navigate("/dashboard");
             } else {
                 setError(data.message || "Login failed");
             }
         } catch (err) {
-            setError("Network error. Please try again.");
+            console.error("Login error:", err);
+            setError(`Network error. Please try again: ${err.message || err}`);
         }
     };
 

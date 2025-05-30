@@ -29,8 +29,8 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.clear();
     setShowUserModal(false);
-    navigate("/", { replace: true });
-    window.location.reload(); // Ensures state is reset and user can't go back
+    navigate("/login", { replace: true });
+    window.location.reload(); // Ensures all state is reset
   };
 
   const handleCopyEmail = () => {
@@ -108,13 +108,8 @@ const Navbar = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    📋
+                    {copied ? "✔️" : "📋"}
                   </button>
-                  {copied && (
-                    <span style={{ color: "#22c55e", fontSize: "0.95rem", marginLeft: "0.3rem" }}>
-                      Copied!
-                    </span>
-                  )}
                 </div>
                 <div className="flex items-center gap-2 text-gray-600 text-base cursor-pointer hover:text-red-500 transition mt-2">
                   <span role="img" aria-label="logout">🚪</span>

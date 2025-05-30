@@ -8,14 +8,16 @@ import threading
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://localhost:3000"],supports_credentials=True)
 
 def get_db_connection():
+    dbname = os.getenv("DATABASE_NAME")
+    print(f"Connecting to database: {dbname}")
     conn = psycopg2.connect(
-        dbname=os.getenv("DATABASE_NAME"),
+        dbname=dbname,
         user=os.getenv("DATABASE_USER"),
         password=os.getenv("DATABASE_PASSWORD"),
-        host=os.getenv("DATABASE_HOST", "localhost"),
+        host=os.getenv("DATABASE_HOST"),
         port=os.getenv("DATABASE_PORT", 5432)
     )
     return conn
@@ -138,4 +140,4 @@ def user_details():
         return jsonify({"error": "User not found"}), 404
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
