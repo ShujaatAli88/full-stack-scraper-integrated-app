@@ -41,11 +41,16 @@ Designed with a beautiful Amazon-inspired UI and robust backend automation.
 
 ---
 
-## 📸 Local Screenshot
+## 📸 Screenshots
 
-![App Screenshot](frontend/public/Screenshot%20from%202025-05-29%2018-44-22.png)
+<p align="center">
+  <img src="https://img.icons8.com/color/96/000000/amazon.png" height="48"/>
+</p>
 
-![Sample Image](frontend/public/image.png)
+| ![Login](https://i.imgur.com/4M7IWwP.png) | ![Dashboard](https://i.imgur.com/8zQZy4w.png) |
+|:-----------------------------------------:|:---------------------------------------------:|
+| Login Page                               | Product Dashboard                             |
+
 ---
 
 ## 🏗️ Project Structure

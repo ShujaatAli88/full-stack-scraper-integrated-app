@@ -39,13 +39,13 @@ class AmazonCrawler:
         Initializes the Selenium Chrome WebDriver with specified options.
         """
         options = Options()
-        # options.add_argument("--headless=new")
+        options.add_argument("--headless=new")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
-        # options.binary_location = "/usr/bin/chromium"  # Chrome browser binary
+        options.binary_location = "/usr/bin/chromium"  # Chrome browser binary
 
-        # service = Service("/usr/bin/chromedriver")  # ChromeDriver binary
-        self.driver = webdriver.Chrome(options=options)
+        service = Service("/usr/bin/chromedriver")  # ChromeDriver binary
+        self.driver = webdriver.Chrome(service=service,options=options)
 
     def set_cookies(self) -> None:
         """
